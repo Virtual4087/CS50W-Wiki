@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Entry Not Found
+{% endblock %}
+
+{% block body %}
+    <div class="error">
+        <img src="https://img.freepik.com/free-vector/error-404-concept-illustration_114360-1811.jpg?w=1380&t=st=1687854347~exp=1687854947~hmac=86f46303775ce294d3a8646217e7961e119664ae1694f9ad1e069e92679f3dcd">
+        <strong>We're sorry, but the entry you are searching for does not exist in our database.</strong>
+        <a href="{% url 'index'%}" class="btn btn-info">Main page</a>
+    </div>
+{% endblock %}

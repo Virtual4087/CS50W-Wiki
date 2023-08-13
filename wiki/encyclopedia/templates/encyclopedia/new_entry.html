@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Add New Entry
+{% endblock %}
+
+{% block body %}
+    {% if error == "already_exists" %}
+        <div class="alert alert-danger" role="alert">
+            Title already exists. Please choose a different title.
+        </div>
+    {% endif %}
+    <form action="{% url 'new'%}" method="POST" class="new_form">
+        {% csrf_token %}
+        {{add_form}}
+        <button type="submit" class="btn btn-success">Create</button>
+    </form>
+{% endblock %}
